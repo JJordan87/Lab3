@@ -22,13 +22,13 @@ while(true)
         continue;
     }
 
-    Console.WriteLine(String.Format("{0,6} {1,12} {2,20}\n ", "Number", "Squared", "Cubed"));
-    Console.WriteLine(String.Format("{0,6} {1,12} {2,20}\n ", "=======", "=======", "======"));
+    Console.WriteLine(String.Format("{0,6} {1,12} {2,18}", "Number", "Squared", "Cubed"));
+    Console.WriteLine(String.Format("{0,6} {1,12} {2,18}", "=======", "=======", "======"));
     for (i = 1; i <= choosenNum; i++)
     {
-        int square = (int)Math.Pow(i, 2);
-        int cube = (int)Math.Pow(i, 3);
-        Console.WriteLine(String.Format("{0,6} {1,12} {2,20}\n ", i, square, cube));
+        int cube = cubed(i);
+        int square = squared(i);
+        Console.WriteLine(String.Format("{0,6} {1,12} {2,18}", i, square, cube));
     }
     if (i >= choosenNum)
     {
@@ -52,12 +52,12 @@ while(true)
     }
 }
 
-//methods ended not using 
-//static int cubed(int x)
-//{
-//    return (int)Math.Pow(numCub, 3);
-//} 
-//static int squared(int numSq)
-//{
-//    return (int)Math.Pow(numSq, 2);
-//}
+//methods
+static int cubed(int x)
+{
+    return (int)Math.Pow(x, 3);
+}
+static int squared(int y)
+{
+    return (int)Math.Pow(y, 2);
+}
